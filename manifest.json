@@ -1,0 +1,17 @@
+{
+    "manifest_version": 3,
+    "name": "Remove Twitch Turbo Ad",
+    "version": "1.0",
+    "description": "This extension removes the Twitch Turbo ad element from a web page.",
+    "permissions": ["activeTab"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://www.twitch.tv/*"],
+        "js": ["content.js"]
+      }
+    ]
+  }
+  
